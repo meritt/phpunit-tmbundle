@@ -5,16 +5,14 @@
 	<key>beforeRunningCommand</key>
 	<string>saveModifiedFiles</string>
 	<key>command</key>
-	<string>"${TM_RUBY:-ruby}" -r "$TM_BUNDLE_SUPPORT/opencoverage.rb"</string>
+	<string>"${TM_RUBY:-ruby}" -r "$TM_BUNDLE_SUPPORT/runtest-coverage.rb"</string>
 	<key>input</key>
 	<string>none</string>
-	<key>keyEquivalent</key>
-	<string>~@C</string>
 	<key>name</key>
-	<string>Show code-coverage</string>
+	<string>Run test with code-coverage</string>
 	<key>output</key>
-	<string>discard</string>
+	<string>showAsHTML</string>
 	<key>uuid</key>
-	<string>19394DC2-0B6C-4AC0-A139-38C8FC8A5B25</string>
+	<string>03361504-0D23-4A61-94B9-6472636D0E13</string>
 </dict>
 </plist>
