@@ -1,0 +1,23 @@
+require File.dirname(__FILE__) + '/spec_helper'
+
+describe "String extensions" do
+  it "should escape line breaks" do
+    "this\nis a test\n".escape_line_breaks.should == "this<br>\nis a test<br>\n"
+  end
+  
+  it "should add code links" do
+    "some text
+/my/file:30
+/your_file.php:20002".add_code_links.should == "some text
+<a href='txmt://open?url=file:///my/file&line=30'>/my/file:30</a>
+<a href='txmt://open?url=file:///your_file.php&line=20002'>/your_file.php:20002</a>"
+  end
+  
+  it "should know if it starts_with something" do
+    "foobar".starts_with?("foo").should be_true
+    "foobar".starts_with?("f").should be_true
+    "foobar".starts_with?("foob").should be_true
+    "foobar".starts_with?("fdo").should be_false
+    "foobar".starts_with?("o").should be_false
+  end
+end

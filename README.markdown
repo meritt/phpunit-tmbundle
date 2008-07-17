@@ -3,8 +3,7 @@ PHPUnit TextMate bundle
 
 Contains the following commands specific:
 
-* Run test - run PHPUnit tests from current project
-* Show Code-Coverage - open the code-coverage html file
+* Run test - run PHPUnit test for the current file
 
 Prerequisites
 =============
@@ -26,3 +25,4 @@ Author
 ======
 
 Alexey Simonenko, dwarfman@gmail.com
+Jeremy Lightsmith, jeremy.lightsmith@gmail.com

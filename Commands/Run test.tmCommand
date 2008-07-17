@@ -9,11 +9,13 @@
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>~@R</string>
+	<string>@r</string>
 	<key>name</key>
 	<string>Run test</string>
 	<key>output</key>
 	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.php</string>
 	<key>uuid</key>
 	<string>8228ACD2-6C9D-47CE-B4A6-082DAB1C5649</string>
 </dict>

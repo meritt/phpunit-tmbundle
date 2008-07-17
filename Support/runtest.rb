@@ -1,12 +1,10 @@
 #!/usr/bin/env ruby
-
 require "#{ENV['TM_BUNDLE_SUPPORT']}/header.rb"
 
-html_header("Run test", "PHPUnit - Run test")
+dir, file = ENV['TM_DIRECTORY'], ENV['TM_FILENAME']
 
-dir, file = File.dirname(ENV['TM_FILEPATH']), File.basename(ENV['TM_FILEPATH'])
+show_page("Run #{file}", "PHPUnit - Run test") do
+  output = `cd "#{dir}"; phpunit #{file}`
+  puts output.add_code_links.escape_line_breaks
+end
 
-phpunit_output = `cd "#{dir}"; phpunit #{file}`
-puts phpunit_output.gsub(/[\n]/, '<br>') 
-
-html_footer()
