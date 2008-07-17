@@ -27,7 +27,10 @@ class String
     end
   end
 
-  def escape_line_breaks
+  def escape_html
+    gsub('&', '&amp;').
+    gsub('<', '&lt;').
+    gsub('>', '&gt;').
     gsub(/\n/, "<br>\n")
   end
 end

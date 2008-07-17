@@ -1,8 +1,9 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
 describe "String extensions" do
-  it "should escape line breaks" do
-    "this\nis a test\n".escape_line_breaks.should == "this<br>\nis a test<br>\n"
+  it "should escape html" do
+    "this\nis a test\n".escape_html.should == "this<br>\nis a test<br>\n"
+    "this <thing/> & that".escape_html.should == "this &lt;thing/&gt; &amp; that"
   end
   
   it "should add code links" do
