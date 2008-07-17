@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
-describe "String extensions" do
+describe String do
   it "should escape html" do
     "this\nis a test\n".escape_html.should == "this<br>\nis a test<br>\n"
     "this <thing/> & that".escape_html.should == "this &lt;thing/&gt; &amp; that"

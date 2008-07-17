@@ -7,4 +7,3 @@ show_page("Run #{file}", "PHPUnit - Run test") do
   output = `cd "#{dir}"; phpunit #{file}`
   puts output.escape_html.add_code_links
 end
-

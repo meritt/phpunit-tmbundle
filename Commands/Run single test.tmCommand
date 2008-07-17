@@ -5,18 +5,18 @@
 	<key>beforeRunningCommand</key>
 	<string>saveModifiedFiles</string>
 	<key>command</key>
-	<string>"${TM_RUBY:-ruby}" -r "$TM_BUNDLE_SUPPORT/run_tests.rb"</string>
+	<string>"${TM_RUBY:-ruby}" -r "$TM_BUNDLE_SUPPORT/run_single_test.rb"</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@r</string>
+	<string>@R</string>
 	<key>name</key>
-	<string>Run tests</string>
+	<string>Run single test</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>uuid</key>
-	<string>8228ACD2-6C9D-47CE-B4A6-082DAB1C5649</string>
+	<string>8A605C02-D7F6-43AD-9126-9965C9EB0E21</string>
 </dict>
 </plist>
