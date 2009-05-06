@@ -3,17 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>public function test${1:TestName}() {
-    $0
-}
-</string>
+	<string>\$this-&gt;assertTrue( ${1:condition}${2:, '${3:message}'} );$0</string>
 	<key>name</key>
-	<string>test</string>
+	<string>assertTrue</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>test</string>
+	<string>assert</string>
 	<key>uuid</key>
-	<string>6C633F13-A4EC-4A1E-816D-D775AA30AC5D</string>
+	<string>3DDA97E0-47F0-4B8C-AAD0-2D2BE3F9CB23</string>
 </dict>
 </plist>

@@ -3,17 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>public function test${1:TestName}() {
-    $0
-}
-</string>
+	<string>\$this-&gt;assertContains( ${1:needle}, ${2:haystack}${3:, '${4:message}'} );$0</string>
 	<key>name</key>
-	<string>test</string>
+	<string>assertContains</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>test</string>
+	<string>assert</string>
 	<key>uuid</key>
-	<string>6C633F13-A4EC-4A1E-816D-D775AA30AC5D</string>
+	<string>0668DE25-8427-4B6E-B24D-0599667B95F7</string>
 </dict>
 </plist>
