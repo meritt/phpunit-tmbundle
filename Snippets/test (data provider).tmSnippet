@@ -3,18 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>require_once 'PHPUnit/Framework.php';
-
-class ${1:ClassName}Test extends PHPUnit_Framework_TestCase {
-	$0
+	<string>/**
+ * @dataProvider ${1:dataProviderMethodName}
+*/
+public function test${2:TestName}( ${3:arguments} ) {
+    $0
 }</string>
 	<key>name</key>
-	<string>test case</string>
+	<string>test (data provider)</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>testcase</string>
+	<string>dptest</string>
 	<key>uuid</key>
-	<string>660B663C-F31B-4811-8970-45EE38238082</string>
+	<string>46BF4991-44F3-4E95-9055-66E089A159EA</string>
 </dict>
 </plist>
