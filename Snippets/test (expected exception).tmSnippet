@@ -3,18 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>require_once 'PHPUnit/Framework.php';
-
-class ${1:ClassName}Test extends PHPUnit_Framework_TestCase {
-	$0
+	<string>/**
+ * @expectedException ${1:ExceptionClassName}
+*/
+public function test${2:TestName}() {
+    $0
 }</string>
 	<key>name</key>
-	<string>test case</string>
+	<string>test (expected exception)</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>testcase</string>
+	<string>extest</string>
 	<key>uuid</key>
-	<string>660B663C-F31B-4811-8970-45EE38238082</string>
+	<string>87754C58-78F6-4BD3-9FD4-BC6B49180863</string>
 </dict>
 </plist>
