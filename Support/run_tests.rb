@@ -5,10 +5,13 @@ require 'erb'
 require "#{ENV['TM_BUNDLE_SUPPORT']}/header.rb"
 require "#{ENV['TM_BUNDLE_SUPPORT']}/phpunit.rb"
 
-is_remote = ENV["REMOTE_HOST"] && ENV["REMOTE_PATH"] && ENV["LOCAL_PATH"]
 file = ENV['TM_FILENAME']
-dir = is_remote ? ENV['TM_DIRECTORY'].gsub(/#{ENV['LOCAL_PATH']}/,ENV["REMOTE_PATH"]) : ENV['TM_DIRECTORY']
-cmd = is_remote ? "ssh #{ENV['REMOTE_HOST']}" : "/bin/sh"
-output = `#{cmd} "cd \"#{dir}\"; phpunit --log-xml /tmp/#{file}.xml #{file} > /dev/null; cat /tmp/#{file}.xml; rm /tmp/#{file}.xml"`
+dir = PHPUnit::Processor.is_remote? ? ENV['TM_DIRECTORY'].gsub(/#{ENV['LOCAL_PATH']}/,ENV["REMOTE_PATH"]) : ENV['TM_DIRECTORY']
+if PHPUnit::Processor.is_remote? 
+  output = `ssh #{ENV['REMOTE_HOST']} "cd #{dir}; phpunit --log-xml /tmp/#{file}.xml #{file} > /dev/null; cat /tmp/#{file}.xml; rm /tmp/#{file}.xml"`
+else
+  output = `cd #{dir}; phpunit --log-xml /tmp/#{file}.xml #{file} > /dev/null; cat /tmp/#{file}.xml; rm /tmp/#{file}.xml`
+end
+
 results = PHPUnit::Processor.xml(output)
 puts ERB.new(File.read("#{ENV['TM_BUNDLE_SUPPORT']}/results.html.erb")).result(binding)
