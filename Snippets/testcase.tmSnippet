@@ -5,7 +5,8 @@
 	<key>content</key>
 	<string>require_once 'PHPUnit/Framework.php';
 
-class ${1:ClassName}Test extends PHPUnit_Framework_TestCase {
+class ${1:ClassName}Test extends PHPUnit_Framework_TestCase 
+{
 	$0
 }</string>
 	<key>name</key>

@@ -4,56 +4,56 @@
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <title>
-            PHPUnit Results: <%= title %>
+            PHPUnit Results
         </title>
         <style type="text/css" media="screen">
             /* yui - reset */
             html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
             
             
-            #head {
+            .head {
                 padding: 1em;
                 background: #000;
                 color: #FFF;
             }
             
-            #head h1 .filename {
+            .head h1 .filename {
                 font-weight: bold;
             }
             
-            #summary {
+            .summary {
                 font-size: .9em;
                 float: right;
             }
             
-            #summary li {
+            .summary li {
                 display: inline;
                 padding: 0 .3em;
             }
             
-            #body {
+            .body {
                 padding: 1em;
             }
             
-            #results .time {
+            .results .time {
                 float: right;
             }
             
-            #results li {
+            .results li {
                 padding: 4px;
                 margin: 0 0 4px 0;
                 font-size: .9em;
             }
             
-            #results li h3 {
+            .results li h3 {
                 font-weight: bold;
             }
             
-            #results li h3 > span {
+            .results li h3 > span {
                 font-weight: normal;
             }
             
-            #results .message {
+            .results .message {
                 padding: 1em;
                 margin: 4px 0 0 0;
                 background: #333;
@@ -63,50 +63,81 @@
                 font-family: monospace;
             }
             
-            #results .message a:link,
-            #results .message a:visited,
-            #results .message a:active {
+            .results .message a:link,
+            .results .message a:visited,
+            .results .message a:active {
                 color: #FF0;
                 font-family: Arial, "MS Trebuchet", sans-serif;
             }
             
             .total { background: #999; color: #FFF; }
             
-            #head.pass, .pass { background: #9f6; color: #090; }
-            #head.fail, .fail { background: #C00; color: #FFF; }
-            #head.skipped, .skipped { background: #CCC; color: #999; }
-            #head.incomplete, .incomplete { background: #FC0; color: #960; }
+            .head.pass { background: #090; color: #FFF; }
+            li.pass { background: #9f6; color: #090; border-left: 1em solid #090; }
+            .head.fail, li.fail { background: #C00; color: #FFF; }
+            
+            #parent {
+                padding: 2em;
+            }
+            
+            #parent .body {
+                padding: 0;
+            }
+            
+            #parent .head {
+                padding: 4px;
+                margin: 0 0 4px 0;
+            }
         </style>
     </head>
     <body>
-        <div id="head" class="<%= overall_status %>">
-            <div id="summary">
+        <% if results[:parent] %>
+        <div class="head <%= results[:parent][:status] %>">
+            <div class="summary">
                 <ul>
-                    <% if counts[:fail] > 0 %><li><%= counts[:fail] %> Fail</li><% end %>
-                    <% if counts[:pass] > 0 %><li><%= counts[:pass] %> Pass</li><% end %>
-                    <% if counts[:assertions] > 0 %><li><%= counts[:assertions] %> Assertions</li><% end %>
+                    <% if results[:parent][:counts][:fail] > 0 %><li><%= results[:parent][:counts][:fail] %> Fail</li><% end %>
+                    <% if results[:parent][:counts][:pass] > 0 %><li><%= results[:parent][:counts][:pass] %> Pass</li><% end %>
+                    <% if results[:parent][:counts][:assertions] > 0 %><li><%= results[:parent][:counts][:assertions] %> Assertions</li><% end %>
+                    <li>Total time: <%= results[:parent][:total_time] %> sec</li>
                 </ul>
             </div>
-            <h1 id="phpunit_results">PHPUnit Results: <span class="filename"><%= title %></span></h1>
+            <h1 class="phpunit_results"><span class="filename"><%= results[:parent][:name] %></span></h1>
         </div>
-        <div id="body">
-            <div id="results">
+        <div id="parent">
+        <% end %>
+        <% for testsuite in results[:suites] %>
+        <div class="head <%= testsuite[:status] %>">
+            <div class="summary">
                 <ul>
-                    <% for r in test_results do %>
-                    <li class="<%= r['status']%>">
-                        <span class="time"><%= "%01.8f" % r["time"] %> sec</span>
-                        <h3><span><%= r["status"].capitalize %></span>: <%= r["test"].gsub(/_/," ").gsub(/\([^\)]+\)/,'') %></h3>
-                        <% if r["status"] == 'fail' %>
-<div class="message"><%= r['message'] %></div>
+                    <% if testsuite[:counts][:fail] > 0 %><li><%= testsuite[:counts][:fail] %> Fail</li><% end %>
+                    <% if testsuite[:counts][:pass] > 0 %><li><%= testsuite[:counts][:pass] %> Pass</li><% end %>
+                    <% if testsuite[:counts][:assertions] > 0 %><li><%= testsuite[:counts][:assertions] %> Assertions</li><% end %>
+                </ul>
+            </div>
+            <h1 class="phpunit_results"><span class="filename"><%= testsuite[:name] %></span></h1>
+        </div>
+        <div class="body">
+            <div class="results">
+                <ul>
+                    <% for r in testsuite[:cases] do %>
+                    <li class="<%= r[:status]%>">
+                        <span class="time"><%= "%01.8f" % r[:time] %> sec</span>
+                        <h3><%= r[:test].gsub(/_/," ").gsub(/\([^\)]+\)/,'') %></h3>
+                        <% if r[:status] == 'fail' %>
+<div class="message"><%= r[:message] %></div>
                         <% end %>
                     </li>
                     <% end %>
                     <li class="total">
-                        <span class="time"><%= "%01.8f" % total_time %> sec</span>
+                        <span class="time"><%= "%01.8f" % testsuite[:total_time] %> sec</span>
                         <h3>Total time:</h3>
                     </li>
                 </ul>
             </div>
         </div>
+        <% end %>
+        <% if results[:parent] %>
+        </div>
+        <% end %>
     </body>
 </html>

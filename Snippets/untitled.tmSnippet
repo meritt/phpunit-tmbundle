@@ -3,9 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>public function test${1:TestName}() {
-    $0
-}
+	<string>/**
+ * ${1:It should}
+ * @author ${PHPDOC_AUTHOR:$TM_FULLNAME}
+ * @test
+ */
+public function ${1/\W/_/g}()
+{
+	$0
+} // $1
 </string>
 	<key>name</key>
 	<string>test</string>
@@ -14,6 +20,6 @@
 	<key>tabTrigger</key>
 	<string>test</string>
 	<key>uuid</key>
-	<string>6C633F13-A4EC-4A1E-816D-D775AA30AC5D</string>
+	<string>8B95FE77-8E5B-4E41-BF27-69B179CD690C</string>
 </dict>
 </plist>
