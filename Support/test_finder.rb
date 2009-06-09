@@ -7,6 +7,6 @@ class TestFinder
   private
   
   def self.next_test(text)
-    text =~ /function (test\w+)\(/ ? $1 : nil
+    text =~ /function ((It|test)\w+)\(/ ? $1 : nil
   end
 end
