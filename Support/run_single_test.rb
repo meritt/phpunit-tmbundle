@@ -8,12 +8,11 @@ require "#{ENV['TM_BUNDLE_SUPPORT']}/phpunit.rb"
 test_name = TestFinder.find_last_test_before_line(ENV['TM_FILEPATH'], ENV['TM_LINE_NUMBER'])
 file = ENV['TM_FILENAME']
 dir = PHPUnit::Processor.is_remote? ? ENV['TM_DIRECTORY'].gsub(/#{ENV['LOCAL_PATH']}/,ENV["REMOTE_PATH"]) : ENV['TM_DIRECTORY']
-
+cmd = "cd #{dir}; phpunit --log-xml /tmp/#{file}.xml --filter #{test_name} #{file} > /dev/null; cat /tmp/#{file}.xml; rm /tmp/#{file}.xml"
 if PHPUnit::Processor.is_remote? 
-  output = `ssh #{ENV['REMOTE_HOST']} "cd #{dir}; phpunit --log-xml /tmp/#{file}.xml --filter #{test_name} #{file} > /dev/null; cat /tmp/#{file}.xml; rm /tmp/#{file}.xml"`
+  output = `ssh #{ENV['REMOTE_HOST']} "#{cmd}"`
 else
-  output = `cd #{dir}; phpunit --log-xml /tmp/#{file}.xml --filter #{test_name} #{file} > /dev/null; cat /tmp/#{file}.xml; rm /tmp/#{file}.xml`
+  output = `#{cmd}`
 end
-
 results = PHPUnit::Processor.xml(output)
 puts ERB.new(File.read("#{ENV['TM_BUNDLE_SUPPORT']}/results.html.erb")).result(binding)
