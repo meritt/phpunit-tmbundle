@@ -44,7 +44,8 @@ module PHPUnit
           testcase[:status] = 'pass'
           if tc.children?
             testcase[:status] = 'fail' 
-            testcase[:message] = tc.find_first('failure/text()').content.gsub(/^\n/, '').gsub(/^\s+\w/, '').gsub(/^.+#{ENV['REMOTE_PATH']}/, ENV['LOCAL_PATH']).escape_html.gsub(/<br>/, '').add_code_links
+            testcase[:message] = tc.find_first('failure/text()').content.gsub(/^\n/, '').gsub(/^\s+\w/, '').escape_html.gsub(/<br>/, '').add_code_links
+            testcase[:message] = tc.find_first('failure/text()').content.gsub(/^\n/, '').gsub(/^\s+\w/, '').gsub(/^.+#{ENV['REMOTE_PATH']}/, ENV['LOCAL_PATH']).escape_html.gsub(/<br>/, '').add_code_links if self.is_remote?
           end
           testsuite[:cases] << testcase
         end
@@ -52,5 +53,9 @@ module PHPUnit
       end
       results
     end # process_xml_log
+    
+    def self.is_remote?
+      ENV["REMOTE_HOST"] && ENV["REMOTE_PATH"] && ENV["LOCAL_PATH"]
+    end
   end # Processor
 end # PHPUnit
