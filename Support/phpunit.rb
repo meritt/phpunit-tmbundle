@@ -2,6 +2,14 @@ module PHPUnit
   class Processor
     def self.xml(output)
       results = {}
+      if output.empty?
+        results[:suites] = [{
+            :name => 'Error running tests!',
+            :status => 'fail',
+            :cases => [],
+          }]
+        return results
+      end
       xml = XML::Document.string(output)
       testsuites = xml.find("/testsuites/testsuite/testsuite") 
       if testsuites.length > 0

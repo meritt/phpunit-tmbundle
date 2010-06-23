@@ -30,7 +30,6 @@
             #parent{padding:2em;}
             #parent .body{padding:0;}
             #parent .head{padding:4px;margin:0 0 4px 0;}
-
         </style>
     </head>
     <body>
@@ -51,6 +50,7 @@
         <% end %>
         <% for testsuite in results[:suites] %>
         <div class="head <%= testsuite[:status] %>">
+            <% if testsuite[:counts] %>
             <div class="summary">
                 <ul>
                     <% if testsuite[:counts][:fail] > 0 %><li><%= testsuite[:counts][:fail] %> Fail</li><% end %>
@@ -59,6 +59,7 @@
                     <% if testsuite[:counts][:assertions] > 0 %><li><%= testsuite[:counts][:assertions] %> Assertions</li><% end %>
                 </ul>
             </div>
+            <% end %>
             <h1 class="phpunit_results"><span class="filename"><%= testsuite[:name] %></span></h1>
         </div>
         <div class="body">
@@ -73,10 +74,12 @@
                         <% end %>
                     </li>
                     <% end %>
+                    <% if testsuite[:total_time] %>
                     <li class="total">
                         <span class="time"><%= "%01.8f" % testsuite[:total_time] %> sec</span>
                         <h3>Total time:</h3>
                     </li>
+                    <% end %>
                 </ul>
             </div>
         </div>
