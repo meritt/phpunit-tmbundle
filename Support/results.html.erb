@@ -26,6 +26,7 @@
             .head.pass{background:#090;color:#FFF;}
             li.pass{background:#9f6;color:#090;border-left:1em solid #090;}
             .head.fail,li.fail{background:#C00;color:#FFF;}
+            .head.error,li.error{background:#E37200;color:#FFF;}
             #parent{padding:2em;}
             #parent .body{padding:0;}
             #parent .head{padding:4px;margin:0 0 4px 0;}
@@ -38,6 +39,7 @@
             <div class="summary">
                 <ul>
                     <% if results[:parent][:counts][:fail] > 0 %><li><%= results[:parent][:counts][:fail] %> Fail</li><% end %>
+                    <% if results[:parent][:counts][:error] > 0 %><li><%= results[:parent][:counts][:error] %> Error</li><% end %>
                     <% if results[:parent][:counts][:pass] > 0 %><li><%= results[:parent][:counts][:pass] %> Pass</li><% end %>
                     <% if results[:parent][:counts][:assertions] > 0 %><li><%= results[:parent][:counts][:assertions] %> Assertions</li><% end %>
                     <li>Total time: <%= results[:parent][:total_time] %> sec</li>
@@ -52,6 +54,7 @@
             <div class="summary">
                 <ul>
                     <% if testsuite[:counts][:fail] > 0 %><li><%= testsuite[:counts][:fail] %> Fail</li><% end %>
+                    <% if testsuite[:counts][:error] > 0 %><li><%= testsuite[:counts][:error] %> Error</li><% end %>
                     <% if testsuite[:counts][:pass] > 0 %><li><%= testsuite[:counts][:pass] %> Pass</li><% end %>
                     <% if testsuite[:counts][:assertions] > 0 %><li><%= testsuite[:counts][:assertions] %> Assertions</li><% end %>
                 </ul>
@@ -65,7 +68,7 @@
                     <li class="<%= r[:status]%>">
                         <span class="time"><%= "%01.8f" % r[:time] %> sec</span>
                         <h3><%= r[:test].gsub(/_/," ").gsub(/\([^\)]+\)/,'') %></h3>
-                        <% if r[:status] == 'fail' %>
+                        <% if %w{ fail error}.include? r[:status]  %>
 <div class="message"><%= r[:message] %></div>
                         <% end %>
                     </li>
