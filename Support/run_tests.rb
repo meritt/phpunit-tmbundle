@@ -6,8 +6,14 @@ require "#{ENV['TM_BUNDLE_SUPPORT']}/header.rb"
 require "#{ENV['TM_BUNDLE_SUPPORT']}/phpunit.rb"
 
 file = ENV['TM_FILENAME']
+infile = file
+
+if infile =~ /\.xml$/
+  infile = "--configuration #{infile}"
+end
+
 dir = PHPUnit::Processor.is_remote? ? ENV['TM_DIRECTORY'].gsub(/#{ENV['LOCAL_PATH']}/,ENV["REMOTE_PATH"]) : ENV['TM_DIRECTORY']
-cmd = "cd \"#{dir}\"; phpunit --log-junit /tmp/#{file}.xml #{file} > /dev/null; if [ -f /tmp/#{file}.xml ]; then cat /tmp/#{file}.xml; rm /tmp/#{file}.xml; fi;"
+cmd = "cd \"#{dir}\"; phpunit --log-junit /tmp/#{file}.xml #{infile} > /dev/null; if [ -f /tmp/#{file}.xml ]; then cat /tmp/#{file}.xml; rm /tmp/#{file}.xml; fi;"
 if PHPUnit::Processor.is_remote? 
   output = `ssh #{ENV['REMOTE_HOST']} "#{cmd}"`
 else
