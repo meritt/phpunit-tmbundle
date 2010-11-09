@@ -25,10 +25,9 @@ module PHPUnit
         results[:parent][:counts][:assertions] = master.attributes.get_attribute('tests').value.to_i
         results[:parent][:status] = (results[:parent][:counts][:fail] +  results[:parent][:counts][:error]) > 0 ? 'fail' : 'pass'
         results[:parent][:total_time] = master.attributes.get_attribute('time').value.to_f
-
-      else
-        testsuites = xml.find("/testsuites/testsuite")
       end
+      
+	  testsuites = xml.find("/testsuites//testsuite")
 
       results[:suites] = []
       testsuites.each do |ts|
