@@ -22,7 +22,7 @@ module PHPUnit
         results[:parent][:counts][:fail] = master.attributes.get_attribute('failures').value.to_i
         results[:parent][:counts][:error] = master.attributes.get_attribute('errors').value.to_i
         results[:parent][:counts][:pass] = master.attributes.get_attribute('tests').value.to_i - results[:parent][:counts][:fail] - results[:parent][:counts][:error]
-        results[:parent][:counts][:assertions] = master.attributes.get_attribute('tests').value.to_i
+        results[:parent][:counts][:assertions] = master.attributes.get_attribute('assertions').value.to_i
         results[:parent][:status] = (results[:parent][:counts][:fail] +  results[:parent][:counts][:error]) > 0 ? 'fail' : 'pass'
         results[:parent][:total_time] = master.attributes.get_attribute('time').value.to_f
       end
@@ -41,7 +41,7 @@ module PHPUnit
         testsuite[:counts][:fail] = ts.attributes.get_attribute('failures').value.to_i
         testsuite[:counts][:error] = ts.attributes.get_attribute('errors').value.to_i
         testsuite[:counts][:pass] = ts.attributes.get_attribute('tests').value.to_i - testsuite[:counts][:fail] - testsuite[:counts][:error]
-        testsuite[:counts][:assertions] = ts.attributes.get_attribute('tests').value.to_i
+        testsuite[:counts][:assertions] = ts.attributes.get_attribute('assertions').value.to_i
         testsuite[:status] = (testsuite[:counts][:fail] + testsuite[:counts][:error]) > 0 ? 'fail' : 'pass'
         testsuite[:total_time] = ts.attributes.get_attribute('time').value.to_f
 
