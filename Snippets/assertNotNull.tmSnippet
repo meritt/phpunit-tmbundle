@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertNotNull(${1:\$variable}${2:, '${3:message}'});$0</string>
+	<string>\$this-&gt;assertNotNull( ${1:\$variable}${2:, '${3:message}'} );$0</string>
 	<key>name</key>
 	<string>assertNotNull</string>
 	<key>scope</key>

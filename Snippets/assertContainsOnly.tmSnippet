@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertObjectHasAttribute( '${1:ClassName}', ${2:object}${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertContainsOnly( ${1:needle}, ${2:haystack}${3:, '${4:message}'} );$0</string>
 	<key>name</key>
-	<string>assertObjectHasAttribute</string>
+	<string>assertContainsOnly</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
 	<string>assert</string>
 	<key>uuid</key>
-	<string>A8D81D1A-4F3D-402C-AA7D-A9F3AF51552E</string>
+	<string>6B10936F-28E9-424E-B6DE-A6490C1A9284</string>
 </dict>
 </plist>

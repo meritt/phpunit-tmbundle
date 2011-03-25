@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertEquals(${1:expected}, ${2:actual}${3:, '${4:message}'});$0</string>
+	<string>\$this-&gt;assertEquals( {1:expected}, ${2:actual}${3:, '${4:message}'} );$0</string>
 	<key>name</key>
 	<string>assertEquals</string>
 	<key>scope</key>
