@@ -90,6 +90,6 @@
         </div>
         <% end %>
         <a href="#" id="log_a" onclick="this.style.display='none';document.getElementById('log').style.display='block';return false">Show log</a>
-        <div id="log"><%= log %></div>
+        <div id="log"><%= log.gsub(/\n/,'<br/>') %></div>
     </body>
 </html>
