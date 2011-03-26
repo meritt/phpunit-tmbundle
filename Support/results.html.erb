@@ -30,6 +30,8 @@
             #parent{padding:2em;}
             #parent .body{padding:0;}
             #parent .head{padding:4px;margin:0 0 4px 0;}
+            #log_a{color:black;float:right;font-size:12px;margin:0 1em}
+            #log{display:none;color:#fff;background:#333;border:1px solid #ccc;margin:1em;padding:1em;margin-top:0}
         </style>
     </head>
     <body>
@@ -87,5 +89,7 @@
         <% if results[:parent] %>
         </div>
         <% end %>
+        <a href="#" id="log_a" onclick="this.style.display='none';document.getElementById('log').style.display='block';return false">Show log</a>
+        <div id="log"><%= log %></div>
     </body>
 </html>
