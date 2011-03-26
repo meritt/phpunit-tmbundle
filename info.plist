@@ -15,6 +15,7 @@
 			<string>46BF4991-44F3-4E95-9055-66E089A159EA</string>
 			<string>87754C58-78F6-4BD3-9FD4-BC6B49180863</string>
 			<string>0A8A8F33-FD92-476A-A965-33ED423FF6DE</string>
+			<string>3B5B95EC-E5E8-4290-A6A9-00EF7718A39E</string>
 			<string>------------------------------------</string>
 			<string>305E3178-D6D2-42E3-B48D-445E49791A94</string>
 			<string>5B4EC95A-E71C-4158-AF5B-DAD5566073D0</string>
@@ -78,6 +79,15 @@
 				<key>name</key>
 				<string>Assert</string>
 			</dict>
+			<key>3B5B95EC-E5E8-4290-A6A9-00EF7718A39E</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>143759F2-2F39-4D3D-8369-461E7870415A</string>
+				</array>
+				<key>name</key>
+				<string>Stubs</string>
+			</dict>
 			<key>5B4EC95A-E71C-4158-AF5B-DAD5566073D0</key>
 			<dict>
 				<key>items</key>
@@ -107,6 +117,7 @@
 		<string>B09D4E39-3701-45CB-8318-058E593FDF7F</string>
 		<string>B0D84DF8-0EA0-48E4-B292-27B7C83E9189</string>
 		<string>7F6EFC24-7323-4326-93E2-18C643DE48C0</string>
+		<string>143759F2-2F39-4D3D-8369-461E7870415A</string>
 		<string>D611ECBB-7663-431B-8C2F-E207642E68EA</string>
 		<string>4918D915-6D63-4A39-B291-0D6FD24342D0</string>
 		<string>3DDA97E0-47F0-4B8C-AAD0-2D2BE3F9CB23</string>
