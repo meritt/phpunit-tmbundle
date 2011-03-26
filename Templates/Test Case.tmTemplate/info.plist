@@ -2,18 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>content</key>
-	<string>class ${1:ClassName}Test extends PHPUnit_Framework_TestCase 
-{
-	$0
-}</string>
+	<key>command</key>
+	<string>[ -f "$TM_NEW_FILE" ] ||  perl -pe 's/\$\{([^}]*)\}/$ENV{$1}/g' &lt;ClassTest.php &gt;"$TM_NEW_FILE"</string>
+	<key>extension</key>
+	<string>php</string>
 	<key>name</key>
-	<string>Test case</string>
+	<string>Test Case</string>
 	<key>scope</key>
 	<string>source.php</string>
-	<key>tabTrigger</key>
-	<string>case</string>
 	<key>uuid</key>
-	<string>660B663C-F31B-4811-8970-45EE38238082</string>
+	<string>A066F985-0F20-4194-93FB-D85CF292667E</string>
 </dict>
 </plist>
