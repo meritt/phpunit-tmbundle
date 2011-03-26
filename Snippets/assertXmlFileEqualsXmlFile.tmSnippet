@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertTrue(${1:bool condition}${2:, '${3:message}'});$0</string>
+	<string>\$this-&gt;assertXmlFileEqualsXmlFile('${1:expectedFile}', '${2:actualFile}'${3:, '${4:message}'});$0</string>
 	<key>name</key>
-	<string>assertTrue</string>
+	<string>assertXmlFileEqualsXmlFile</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>ast</string>
+	<string>asxml</string>
 	<key>uuid</key>
-	<string>3DDA97E0-47F0-4B8C-AAD0-2D2BE3F9CB23</string>
+	<string>DF029BA2-FE43-45A2-81CA-11B302453CB5</string>
 </dict>
 </plist>

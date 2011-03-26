@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertContains( ${1:needle}, ${2:haystack}${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertContains(${1:mixed needle}, ${2:Iterator|array haystack}${3:, '${4:message}'});$0</string>
 	<key>name</key>
 	<string>assertContains</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>ascont</string>
 	<key>uuid</key>
 	<string>0668DE25-8427-4B6E-B24D-0599667B95F7</string>
 </dict>

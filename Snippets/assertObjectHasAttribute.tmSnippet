@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertObjectHasAttribute( '${1:ClassName}', ${2:object}${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertObjectHasAttribute('${1:attribute}', ${2:object}${3:, '${4:message}'});$0</string>
 	<key>name</key>
 	<string>assertObjectHasAttribute</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>aso</string>
 	<key>uuid</key>
 	<string>A8D81D1A-4F3D-402C-AA7D-A9F3AF51552E</string>
 </dict>

@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertTrue(${1:bool condition}${2:, '${3:message}'});$0</string>
+	<string>\$this-&gt;assertStringMatchesFormat('${1:format}', ${2:string}${3:, '${4:message}'});$0</string>
 	<key>name</key>
-	<string>assertTrue</string>
+	<string>assertStringMatchesFormat</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>ast</string>
+	<string>asstr</string>
 	<key>uuid</key>
-	<string>3DDA97E0-47F0-4B8C-AAD0-2D2BE3F9CB23</string>
+	<string>43FA8878-DF89-4B46-84F3-3B44B2A862E4</string>
 </dict>
 </plist>

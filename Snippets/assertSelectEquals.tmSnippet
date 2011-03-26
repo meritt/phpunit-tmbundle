@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertTrue(${1:bool condition}${2:, '${3:message}'});$0</string>
+	<string>\$this-&gt;assertSelectEquals(${1:array selector}, ${2:string content}, ${3:int count}, ${4:mixed actual}${5:, '${6:string message}'${7:, ${8:bool isHtml=true}}});$0</string>
 	<key>name</key>
-	<string>assertTrue</string>
+	<string>assertSelectEquals</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>ast</string>
+	<string>assel</string>
 	<key>uuid</key>
-	<string>3DDA97E0-47F0-4B8C-AAD0-2D2BE3F9CB23</string>
+	<string>FC7D8275-110F-48F8-8619-666F343EE24C</string>
 </dict>
 </plist>

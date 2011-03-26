@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertFileExists( '${1:/path/to/file}'${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertFileExists('${1:filename}'${3:, '${4:message}'});$0</string>
 	<key>name</key>
 	<string>assertFileExists</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>asf</string>
 	<key>uuid</key>
 	<string>E3F8E77D-62B0-4BFB-B706-218E880DF5DD</string>
 </dict>

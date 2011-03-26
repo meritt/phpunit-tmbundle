@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertFileEquals( '${1:/path/to/expected}', '${2:/path/to/actual}'${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertFileEquals('${1:expectedFile}', '${2:actualFile}'${3:, '${4:message}'});$0</string>
 	<key>name</key>
 	<string>assertFileEquals</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>asfe</string>
 	<key>uuid</key>
 	<string>5136013F-D4B5-433C-BE46-886C944D078E</string>
 </dict>

@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertNotRegExp( '${1:pattern}', '${2:string}'${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertInstanceOf('${1:class}', ${2:object}${3:, '${4:message}'});$0</string>
 	<key>name</key>
-	<string>assertNotRegExp</string>
+	<string>assertInstanceOf</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>asi</string>
 	<key>uuid</key>
-	<string>145199FA-7A0E-4FFF-9DC7-B30AEC89C793</string>
+	<string>23A3E703-25E3-4C36-9F88-DF411BA0B0B4</string>
 </dict>
 </plist>

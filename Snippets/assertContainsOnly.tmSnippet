@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertContainsOnly( ${1:needle}, ${2:haystack}${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertContainsOnly('${1:type}', ${2:Iterator|array haystack}${3:, ${4:bool isNativeType=null}${5:, '${6:message}'}});$0</string>
 	<key>name</key>
 	<string>assertContainsOnly</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>ascont</string>
 	<key>uuid</key>
 	<string>6B10936F-28E9-424E-B6DE-A6490C1A9284</string>
 </dict>

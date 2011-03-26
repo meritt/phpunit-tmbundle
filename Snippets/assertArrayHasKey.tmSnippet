@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertArrayHasKey( '${1:key}', ${2:array}${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertArrayHasKey('${1:key}', ${2:array}${3:, '${4:message}'});$0</string>
 	<key>name</key>
 	<string>assertArrayHasKey</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>ask</string>
 	<key>uuid</key>
 	<string>24AA8D9D-5D72-42D5-B81F-4F1CD48C7EA9</string>
 </dict>

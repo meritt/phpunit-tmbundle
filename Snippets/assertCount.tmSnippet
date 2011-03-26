@@ -3,23 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>/**
- * ${1:It should}
- * @author ${PHPDOC_AUTHOR:$TM_FULLNAME}
- * @test
- */
-public function ${1/\W/_/g}()
-{
-	$0
-} // $1
-</string>
+	<string>\$this-&gt;assertCount(${1:int expectedCount}, ${2:array}${3:, '${4:message}'});$0</string>
 	<key>name</key>
-	<string>test</string>
+	<string>assertCount</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>test</string>
+	<string>asc</string>
 	<key>uuid</key>
-	<string>8B95FE77-8E5B-4E41-BF27-69B179CD690C</string>
+	<string>44A37472-2E5D-4FF2-A6D6-5C8DCC1E556F</string>
 </dict>
 </plist>

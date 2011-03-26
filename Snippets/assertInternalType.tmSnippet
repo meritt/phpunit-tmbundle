@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertTrue(${1:bool condition}${2:, '${3:message}'});$0</string>
+	<string>\$this-&gt;assertInternalType('${1:expectedType}', ${2:mixed variable}${3:, '${4:message}'});$0</string>
 	<key>name</key>
-	<string>assertTrue</string>
+	<string>assertInternalType</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>ast</string>
+	<string>asit</string>
 	<key>uuid</key>
-	<string>3DDA97E0-47F0-4B8C-AAD0-2D2BE3F9CB23</string>
+	<string>D947E05F-A756-4EC7-ADE8-B04087CA1D48</string>
 </dict>
 </plist>

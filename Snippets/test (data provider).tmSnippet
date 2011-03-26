@@ -10,11 +10,11 @@ public function test${2:TestName}( ${3:arguments} ) {
     $0
 }</string>
 	<key>name</key>
-	<string>test (data provider)</string>
+	<string>Test (data provider)</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>dptest</string>
+	<string>dtest</string>
 	<key>uuid</key>
 	<string>46BF4991-44F3-4E95-9055-66E089A159EA</string>
 </dict>

@@ -11,11 +11,11 @@ public function test${2:TestName}()
     $0
 }</string>
 	<key>name</key>
-	<string>test (expected exception)</string>
+	<string>Test (expected exception)</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>extest</string>
+	<string>etest</string>
 	<key>uuid</key>
 	<string>87754C58-78F6-4BD3-9FD4-BC6B49180863</string>
 </dict>

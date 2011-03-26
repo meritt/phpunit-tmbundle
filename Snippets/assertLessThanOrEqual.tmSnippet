@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertLessThanOrEqual( ${1:expected}, ${2:actual}${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertLessThanOrEqual(${1:mixed expected}, ${2:mixed actual}${3:, '${4:message}'});$0</string>
 	<key>name</key>
 	<string>assertLessThanOrEqual</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>asle</string>
 	<key>uuid</key>
 	<string>C0028669-11E8-48EE-B3E9-F4A01E035BA2</string>
 </dict>

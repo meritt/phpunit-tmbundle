@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertGreaterThan( ${1:expected}, ${2:actual}${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertGreaterThan(${1:mixed expected}, ${2:mixed actual}${3:, '${4:message}'});$0</string>
 	<key>name</key>
 	<string>assertGreaterThan</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>asg</string>
 	<key>uuid</key>
 	<string>506029A0-F8EE-4570-B647-ACAA5A992ECB</string>
 </dict>

@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertRegExp( '${1:pattern}', '${2:string}'${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertRegExp('${1:pattern}', ${2:string actual}${3:, '${4:message}'});$0</string>
 	<key>name</key>
 	<string>assertRegExp</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>asre</string>
 	<key>uuid</key>
 	<string>E3DAAC05-CF82-4C58-975E-4A31B7AFA3F2</string>
 </dict>

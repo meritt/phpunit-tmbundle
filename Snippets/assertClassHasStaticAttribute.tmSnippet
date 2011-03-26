@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertClassHasStaticAttribute( '${1:attributeName}', '${2:ClassName}'${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertClassHasStaticAttribute('${1:attribute}', '${2:class}'${3:, '${4:message}'});$0</string>
 	<key>name</key>
 	<string>assertClassHasStaticAttribute</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>asc</string>
 	<key>uuid</key>
 	<string>3D422E2D-BD57-49FE-9145-BE728D6DB36C</string>
 </dict>

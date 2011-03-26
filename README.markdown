@@ -29,3 +29,4 @@ Authors
 * Alexey Simonenko, dwarfman@gmail.com
 * Jeremy Lightsmith, jeremy.lightsmith@gmail.com
 * Steve Webster, spjwebster@gmail.com
+* Aleksandr Kosmynin, kosmunin@gmail.com

@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertFalse( ${1:condition}${2:, '${3:message}'} );$0</string>
+	<string>\$this-&gt;assertFalse(${1:bool condition}${2:, '${3:message}'});$0</string>
 	<key>name</key>
 	<string>assertFalse</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>asf</string>
 	<key>uuid</key>
 	<string>2C0ACA16-5693-4891-9E2A-2118DCE3B97E</string>
 </dict>

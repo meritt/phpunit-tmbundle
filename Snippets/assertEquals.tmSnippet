@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertEquals( {1:expected}, ${2:actual}${3:, '${4:message}'} );$0</string>
+	<string>\$this-&gt;assertEquals(${1:mixed expected}, ${2:mixed actual}${3:, '${4:message}'});$0</string>
 	<key>name</key>
 	<string>assertEquals</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>assert</string>
+	<string>ase</string>
 	<key>uuid</key>
 	<string>D611ECBB-7663-431B-8C2F-E207642E68EA</string>
 </dict>

@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;assertTrue(${1:bool condition}${2:, '${3:message}'});$0</string>
+	<string>\$this-&gt;assertEqualXMLStructure(${1:DOMNode expectedNode}, ${2:DOMNode actualNode}${3:, ${4:bool checkAttributes=false}${5:, '${6:message}'}});$0</string>
 	<key>name</key>
-	<string>assertTrue</string>
+	<string>assertEqualXMLStructure</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>ast</string>
+	<string>asxml</string>
 	<key>uuid</key>
-	<string>3DDA97E0-47F0-4B8C-AAD0-2D2BE3F9CB23</string>
+	<string>18B39327-2572-4F08-9D3F-C42C17E5A632</string>
 </dict>
 </plist>
