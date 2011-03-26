@@ -3,13 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>public function setUp() 
-{
+	<string>public function setUp() {
 	$1
 }
 
-${2:public function tearDown() 
-{
+${2:public function tearDown() {
 	$3
 \}}
 

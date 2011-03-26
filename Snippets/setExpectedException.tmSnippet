@@ -3,19 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>/**
- * @dataProvider ${1:dataProviderMethodName}
-*/
-public function test${2:TestName}(${3:arguments}) {
-    $0
-}</string>
+	<string>\$this-&gt;setExpectedException('${2:exception}'};$0</string>
 	<key>name</key>
-	<string>Test (data provider)</string>
+	<string>setExpectedException</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>dtest</string>
+	<string>exc</string>
 	<key>uuid</key>
-	<string>46BF4991-44F3-4E95-9055-66E089A159EA</string>
+	<string>5A11FED2-CC60-48CF-9776-90804F3C7937</string>
 </dict>
 </plist>
