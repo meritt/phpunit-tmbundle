@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>\$${1:mock}-&gt;expects(\$this-&gt;${2:any}())
+    -&gt;method('${3:method}')${4:
+    -&gt;will(\$this-&gt;${5:returnValue}(${6:'value'}))};$0</string>
+	<key>name</key>
+	<string>expects(...)-&gt;method(...)</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>mexp</string>
+	<key>uuid</key>
+	<string>78D885C0-5AE8-4BCD-B4A6-BDBF0555E639</string>
+</dict>
+</plist>
