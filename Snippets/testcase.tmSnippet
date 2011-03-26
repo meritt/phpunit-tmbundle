@@ -12,7 +12,7 @@
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>case</string>
+	<string>tcase</string>
 	<key>uuid</key>
 	<string>660B663C-F31B-4811-8970-45EE38238082</string>
 </dict>
