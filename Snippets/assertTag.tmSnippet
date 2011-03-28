@@ -9,7 +9,7 @@
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>ast</string>
+	<string>astg</string>
 	<key>uuid</key>
 	<string>AF490643-C0BB-4404-B124-C782726012AB</string>
 </dict>
