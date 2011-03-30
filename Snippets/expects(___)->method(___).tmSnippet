@@ -5,7 +5,8 @@
 	<key>content</key>
 	<string>\$${1:mock}-&gt;expects(\$this-&gt;${2:any}())
     -&gt;method('${3:method}')${4:
-    -&gt;will(\$this-&gt;${5:returnValue}(${6:'value'}))};$0</string>
+    ${5:-&gt;with(\$this-&gt;${6:equalTo}(${7}))}
+    ${8:-&gt;will(\$this-&gt;${9:returnValue}(${10:'value'}))}};$0</string>
 	<key>name</key>
 	<string>expects(...)-&gt;method(...)</string>
 	<key>scope</key>
