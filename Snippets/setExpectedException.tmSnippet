@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$this-&gt;setExpectedException('${2:exception}'};$0</string>
+	<string>\$this-&gt;setExpectedException('${2:exception}');$0</string>
 	<key>name</key>
 	<string>setExpectedException</string>
 	<key>scope</key>

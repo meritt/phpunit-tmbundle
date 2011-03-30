@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$${1:mock}=\$this-&gt;getMock(
+	<string>\$${1:mock} = \$this-&gt;getMock(
   '${2:class}'${3:,
   array('${4:method}')${5:,
   array(${6:mixed param})${7:,
